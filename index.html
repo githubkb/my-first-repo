@@ -5,42 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breedington Bioindustrial - Kalyan Banerjee</title>
     <style>
-        /* ফন্ট এবং ব্যাকগ্রাউন্ড */
+        /* ব্যাকগ্রাউন্ড এবং ফন্ট */
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f4f7f6; margin: 0; padding: 20px; }
         
-        /* কার্ডের ডিজাইন */
-        .card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-align: center; 
-                /* এই অংশটি কার্ডটিকে চওড়া করবে */
-                width: 100%; max-width: 600px; 
-                transition: transform 0.3s ease; }
+        /* কার্ডের মূল ডিজাইন */
+        .card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); text-align: center; width: 100%; max-width: 550px; transition: transform 0.3s ease; border-top: 5px solid #27ae60; }
         .card:hover { transform: translateY(-5px); }
 
-        /* নাম */
-        h1 { color: #2c3e50; font-size: 28px; margin-bottom: 5px; }
-        
-        /* পদবী এবং কোম্পানি (কোম্পানি নাম এক লাইনে থাকবে) */
-        .title { color: #16a085; font-weight: 600; font-size: 18px; margin-top: 0; margin-bottom: 5px; white-space: nowrap; }
-        .expertise { color: #7f8c8d; font-size: 16px; margin-top: 0; margin-bottom: 25px; }
+        /* প্রোফাইল ছবির ডিজাইন */
+        .profile-img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.15); background-color: #eee; }
 
-        /* কন্টাক্ট ইনফো */
-        .contact-info { margin-bottom: 30px; border-top: 1px solid #eee; padding-top: 20px; text-align: left; display: inline-block; }
-        .contact-item { display: flex; align-items: center; margin-bottom: 10px; color: #34495e; font-size: 16px; }
-        .contact-item strong { color: #2c3e50; margin-right: 10px; min-width: 60px; }
-        .contact-item a { color: #3498db; text-decoration: none; }
+        /* নাম এবং টাইটেল */
+        h1 { color: #2c3e50; font-size: 32px; margin-bottom: 8px; margin-top: 10px; }
+        .title { color: #16a085; font-weight: 700; font-size: 20px; margin: 0; white-space: nowrap; }
+        .expertise { color: #7f8c8d; font-size: 16px; margin-top: 5px; margin-bottom: 25px; }
+
+        /* কন্টাক্ট ইনফরমেশন বক্স */
+        .contact-box { background: #f9fbfb; padding: 20px; border-radius: 12px; margin-bottom: 30px; text-align: left; display: inline-block; width: 80%; }
+        .contact-item { display: flex; align-items: center; margin-bottom: 12px; font-size: 16px; color: #34495e; }
+        .contact-item strong { min-width: 70px; color: #2c3e50; }
+        .contact-item a { color: #3498db; text-decoration: none; font-weight: 500; }
         .contact-item a:hover { text-decoration: underline; }
 
         /* বাটন */
-        .btn { background: #27ae60; color: white; padding: 12px 24px; text-decoration: none; border-radius: 30px; display: inline-block; font-weight: bold; font-size: 16px; transition: background 0.3s ease; }
+        .btn { background: #27ae60; color: white; padding: 14px 30px; text-decoration: none; border-radius: 50px; display: inline-block; font-weight: bold; font-size: 18px; transition: background 0.3s ease; box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3); }
         .btn:hover { background: #219150; }
+
+        /* রেসপনসিভ মেজার (মোবাইলের জন্য) */
+        @media (max-width: 480px) {
+            .title { white-space: normal; font-size: 18px; }
+            h1 { font-size: 26px; }
+        }
     </style>
 </head>
 <body>
     <div class="card">
+        <img src="profile.jpg" alt="Kalyan Kumar Banerjee" class="profile-img">
+        
         <h1>Kalyan Kumar Banerjee</h1>
         <p class="title">Director, Breedington Bioindustrial Pvt. Ltd.</p>
         <p class="expertise">Expert in Agribusiness & Biotech Consultancy</p>
         
-        <div class="contact-info">
+        <div class="contact-box">
             <div class="contact-item">
                 <strong>Phone:</strong> <a href="tel:+919831338080">+91 9831338080 (India)</a>
             </div>
@@ -50,7 +56,7 @@
         </div>
 
         <br>
-        <a href="https://bioindustrial.net" class="btn">Website দেখুন</a>
+        <a href="https://bioindustrial.net" target="_blank" class="btn">Website দেখুন</a>
     </div>
 </body>
 </html>
